@@ -6,5 +6,9 @@
     <module
             name="IanLessa_Mage2Exp"
             setup_version="1.0.0"
-    />
+    >
+        <sequence>
+            <module name="Magento_Checkout" />
+        </sequence>
+    </module>
 </config>

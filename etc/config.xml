@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd"
+>
+    <default>
+        <payment>
+            <ianlessa_mage2exp_card>
+                <title>Card</title>
+                <model>IanLessa\Mage2Exp\Model\Payment\Card</model>
+                <active>1</active>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <order_status>pending</order_status>
+                <allowspecific>0</allowspecific>
+                <group>Offline</group>
+            </ianlessa_mage2exp_card>
+        </payment>
+    </default>
+</config>
