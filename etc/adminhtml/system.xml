@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<system>
+    <tab id="ianlessa_mage2exp_config_tab" translate="label" sortOrder="1">
+        <label>Mage2Exp</label>
+    </tab>
+    <section id="ianlessa_mage2exp"
+             translate="label"
+             sortOrder="1"
+             showInDefault="1"
+             showInWebsite="1"
+             showInStore="1"
+    >
+        <class>ianlessa_mage2exp_config_section_class</class>
+        <label>General</label>
+        <tab>ianlessa_mage2exp_config_tab</tab>
+        <resource>IanLessa_Mage2Exp::config</resource>
+        <group id="general"
+               translate="label"
+               type="text"
+               sortOrder="1"
+               showInDefault="1"
+               showInWebsite="1"
+               showInStore="1"
+        >
+            <label>General Config</label>
+            <field id="enable"
+                   translate="label"
+                   type="select"
+                   sortOrder="1"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1"
+            >
+                <label>Enable</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <comment>
+                    Enable/Disable Mage2Exp
+                </comment>
+            </field>
+            <field id="enable_in_storeview"
+                   translate="label"
+                   type="multiselect"
+                   sortOrder="1"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1"
+            >
+                <depends>
+                    <field id="*/*/enable">1</field>
+                </depends>
+                <label>Enable in</label>
+                <source_model>Magento\Config\Model\Config\Source\Store</source_model>
+                <comment>
+                    Enable/Disable Mage2Exp modules in specific store views
+                </comment>
+            </field>
+        </group>
+    </section>
+</system>
+</config>
