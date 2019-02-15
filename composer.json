@@ -7,6 +7,9 @@
   },
   "type": "magento2-module",
   "autoload": {
-    "files": [ "registration.php" ]
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "IanLessa\\Mage2Exp\\": ""
+    }
   }
 }
