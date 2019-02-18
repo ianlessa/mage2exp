@@ -17,6 +17,9 @@ class Card extends \Magento\Payment\Model\Method\Cc
     protected $_supportedCurrencyCodes = array('USD');
     protected $_debugReplacePrivateDataKeys
         = ['number', 'exp_month', 'exp_year', 'cvc'];
+
+    protected $_code = 'ianlessa_mage2exp_card';
+
     public function __construct(\Magento\Framework\Model\Context $context,
                                 \Magento\Framework\Registry $registry,
                                 \Magento\Framework\Api\ExtensionAttributesFactory $extensionFactory,
